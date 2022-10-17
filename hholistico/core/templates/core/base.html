@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Horizonte Holistico</title>
+{% load static %}
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" media="screen" href="{% static 'core/css/reset.css' %}">
+<link rel="stylesheet" type="text/css" media="screen" href="{% static 'core/css/grid_24.css' %}">
+<link rel="stylesheet" type="text/css" media="screen" href="{% static 'core/css/style.css' %}">
+<link rel="stylesheet" type="text/css" media="screen" href="{% static 'core/css/slider.css' %}">
+
+<link rel="stylesheet" href="{% static 'core/css/linearicons.css' %}">
+<link rel="stylesheet" href="{% static 'core/css/font-awesome.min.css' %}">
+<link rel="stylesheet" href="{% static 'core/css/bootstrap.css' %}">
+<link rel="stylesheet" href="{% static 'core/css/magnific-popup.css' %}">
+<link rel="stylesheet" href="{% static 'core/css/nice-select.css' %}">
+<link rel="stylesheet" href="{% static 'core/css/animate.min.css' %}">
+<link rel="stylesheet" href="{% static 'core/css/owl.carousel.css' %}">
+<link rel="stylesheet" href="{% static 'core/css/jquery-ui.css' %}">
+<link rel="stylesheet" href="{% static 'core/css/main.css' %}">
+
+<script src="{% static 'core/js/jquery-1.7.min.js' %}"></script>
+<script src="{% static 'core/js/jquery.easing.1.3.js' %}"></script>
+<script src="{% static 'core/js/tms-0.4.1.js' %}"></script>
+
+
+
+
+<script>
+$(document).ready(function(){				   	
+	$('.slider')._TMS({
+		show:0,
+		pauseOnHover:true,
+		prevBu:'.prev',
+		nextBu:'.next',
+		playBu:false,
+		duration:10000,
+		preset:'zoomer',
+		pagination:true,
+		pagNums:false,
+		slideshow:7000,
+		numStatus:false,
+		banners:false,
+		waitBannerAnimation:false,
+		progressBar:false
+	})
+});
+</script>
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+<![endif]-->
+</head>
+<body>
+<div class="bg-1">
+  <!--==============================header=================================-->
+  {% block header %}  {% endblock %}
+
+  <!--==============================content================================-->
+  {% block content %}{% endblock %}
+  
+</div>
+<!--==============================footer=================================-->
+<footer>
+  <p>© 2022 CBC<br>
+    Website Template by <a target="_blank" href="#" class="link">CBSolutions</a></p>
+</footer>
+</body>
+</html>

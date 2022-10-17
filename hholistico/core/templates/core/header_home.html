@@ -1,0 +1,44 @@
+{% load static %}
+
+<header>
+  <div class="main">
+    <h1><a href="{% url 'home'%}"><img src="{% static 'core/images/logo.png' %}" alt=""></a></h1>
+      
+      <nav class="nav">
+        <ul class="menu navbar-nav mr-auto">
+          <li class="current"></li>
+          {% if request.path == '/' %}
+            <li active >
+          {% else %}
+              <li>
+          {% endif %}
+              <a href="{% url 'home'%}">Home</a></li>
+          <li><a href="{% url 'nosotros' %}">Nosotros</a></li>
+         
+          <li class="left-1 submenu"><a href="#">Terapias</a>
+            <ul>
+              <li><a href="{% url 'hipnoterapia' %}">Hipnoterapia</a></li>
+              <li><a href="{% url 'elybra' %}">Terapia de Biorresonancia E-lybra</a></li>
+            </ul>                         
+              
+          </li>         
+          <li><a href="{% url 'contacto' %}">Contactos</a></li>
+          <li></li>
+        </ul>
+        <div class="clear"></div>
+      </nav>
+    
+    
+      <div id="slide">
+        <div class="slider">
+          <ul class="items">
+            <li><img src="{% static 'core/images/slider-1.jpg' %}" alt=""></li>
+            <li><img src="{% static 'core/images/slider-2.jpg' %}" alt=""></li>
+            <li><img src="{% static 'core/images/slider-3.jpg' %}" alt=""></li>
+          </ul>
+        </div>
+        <a href="#" class="prev"></a><a href="#" class="next"></a> </div>
+    </div>
+  </header>
+
+  

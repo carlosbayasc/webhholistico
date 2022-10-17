@@ -1,0 +1,10 @@
+COLORES HHOLISTICO
+color fucsia
+#F10780
+AZUL
+#0787F1
+verde
+#07F1EA 
+<div class="clear"></div>
+<div class="clear"></div>
+https://htmlcolorcodes.com/es/

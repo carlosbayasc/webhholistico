@@ -1,0 +1,66 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{%block header%}
+  {% include 'core/header_otros.html' %}
+{%endblock%}
+
+
+
+{% block content %}
+  <!--==============================content================================-->
+  <section id="content">
+    <div class="bg-3 bot-3">
+      <div class="container_24">
+        <div class="grid_24">
+          <div class="banner-bg"><!-- <a href="#"></a> --></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="bg-5 bot-1">
+      <div class="container_24">
+        <div class="grid_24">
+          <div class="line"></div>
+          <div class="font-1 pad-3">Nosotros</div>
+        </div>
+        <div class="grid_5">
+          <div class="box-3">
+            <div class="img-border"><img src="{%static 'core/images/nosotros.jpg'%}" alt=""></div>
+            <p class="border-bot"><i class="clr-5"><strong>Quienes somos?</strong></i></p>
+           
+            <div class="clear"></div>
+          </div>
+          
+         
+        </div>
+        <div class="grid_24">
+          <div>
+            <p style="text-align: justify">Horizonte Holístico es creado por Victor y Camila como una herramienta holística, con el fin de
+              poder ayudar y acompañar en un proceso de crecimiento y bienestar integral.
+              Ofrecemos varios tipos de terapias, tratando de no solo ayudar sino también de asistir a cada
+              persona para que puedan encontrar esa terapia que será de mayor beneficio para todos y cada
+              uno de ellos. Además, en muchos casos, integrando mas de un tipo de terapia, para lograr un
+              trabajo más completo y profundo.
+              Nuestro compromiso es poder ayudarles a identificar el origen de lo que desean trabajar, y a
+              su vez poder sanar e integrar para poder fluir de mejor manera en el día a día. Siempre con
+              cada paciente como el actor o actriz principal de sus sesiones de terapia, como de sus vidas.
+              El cuidado y el trabajo debe ser de manera integral. Cuerpo, mente y espíritu.</p>
+           
+            <div class="clear"></div>
+          </div>
+          
+         
+        </div>
+       
+        <div class="clear"></div>
+      </div>
+      
+    </div>
+    {%block telefonos%}
+      {% include 'core/telefonos.html' %}
+    {% endblock%}
+  </section>
+
+<!--==============================footer=================================-->
+{% endblock %}

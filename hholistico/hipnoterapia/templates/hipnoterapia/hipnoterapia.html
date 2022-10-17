@@ -1,0 +1,104 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{%block header%}
+  {% include 'core/header_otros.html' %}
+{%endblock%}
+
+{% block content %}
+   
+<section id="content">
+{% for h in hipnoterapias %}
+  <div class="bg-3 bot-3">
+    <div class="container_24">
+      <div class="grid_24">
+        <div class="banner-bg"><!--<a href="#"></a>--></div>
+      </div>
+      <!-- -->
+      
+    </div>
+  </div>
+  <div class="bg-5">
+    <div class="bg-3 bot-1">
+      <div class="container_24">
+        <div class="grid_24">
+          <div class="line"></div>
+          <div class="font-1 pad-2">{{ h.titulo }}</div>
+        </div>
+        
+        <div class="grid_7 box-2">
+          <h3> {{ h.subtitulo1 }}</h3>
+          <div class="img-border"><img src="{% static 'core/images/hipno1.jpg' %}" alt=""></div>
+          <p class="border-1"><strong>{{h.contenido1}}</strong>  {{h.subcontenido1}}</p>
+          <a href="#" class="link-1">read more</a> </div>
+        <div class="grid_7 box-2 prefix_1">
+          <h3 class="nowrap">{{ h.subtitulo2 }}</h3>
+          <div class="img-border"><img src="{% static 'core/images/regresiva2.jpg'%}" alt=""></div>
+          <p class="border-1"><strong>{{h.contenido2}} </strong> {{h.subcontenido2}}</p>
+          <a href="#" class="link-1">read more</a> </div>
+        <div class="grid_7 box-2 prefix_1">
+          <h3>{{ h.subtitulo3 }}</h3>
+          <div class="img-border"><img src="{% static 'core/images/maestria.jpg'%}" alt=""></div>
+          <p class="border-1"><strong>{{h.contenido3}}</strong> , {{h.subcontenido3}}</p>
+          <a href="#" class="link-1">read more</a> </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-4 bot-1">
+    <div class="container_24">
+      <div class="grid_24">
+        <div class="line"></div>
+      </div>
+      <div class="grid_6 top-1">
+        <div class="number-2"> <strong class="bg-clr-1">01.</strong>
+          <div class="extra-wrap">
+            <h2 class="clr-1">Precios</h2>
+            <p class="border-bot"><i class="clr-1"><strong>El valor de la terapia es de $50.00 </strong></i><br>
+              Cada sesión dura aproximadamente 1 hora</p>
+            <a href="#" class="link-1 fright">read more</a> </div>
+        </div>
+      
+      </div>
+      <div class="grid_6 top-1">
+        <div class="number-2"> <strong class="bg-clr-2">02.</strong>
+          <div class="extra-wrap">
+            <h2 class="clr-2">Frecuencia</h2>
+            <p class="border-bot"><i class="clr-2"><strong> Nuestros encuentros serán 1 vez por
+              semana </strong></i><br>
+              El mismo día y la misma hora </p>
+            <a href="#" class="link-1 fright">read more</a> </div>
+        </div>
+      
+      </div>
+      <div class="grid_6 top-1">
+        <div class="number-2"> <strong class="bg-clr-3">03.</strong>
+          <div class="extra-wrap">
+            <h2 class="clr-3">¿Cómo reservar?</h2>
+            <p class="border-bot"><i class="clr-3"><strong>Para reservar tu espacio se cancelará por anticipado. </strong></i><br>
+              Solo debes llamar a nuestros telefonos de contacto. </p>
+            <a href="#" class="link-1 fright">read more</a> </div>
+        </div>
+      
+      </div>
+      <div class="grid_6 top-1">
+        <div class="number-2"> <strong class="bg-clr-4">04.</strong>
+          <div class="extra-wrap">
+            <h2 class="clr-4">Promoción</h2>
+            <p class="border-bot"><i class="clr-4"><strong>Tenemos varias ofertas para ti</strong></i><br>
+              Si cancelas mínimo 2 terapias el costo es de 40 dólares. </p>
+            <a href="#" class="link-1 fright">read more</a> </div>
+        </div>
+        
+      </div>
+      <!-- -->
+      
+    </div>
+  </div>
+  {%block telefonos%}
+      {% include 'core/telefonos.html' %}
+  {% endblock%}
+{% endfor %}
+</section>
+
+{%endblock%}
